@@ -1,0 +1,11 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:beige;
+    color:rgb(24, 20, 20);
+}

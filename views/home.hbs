@@ -1,0 +1,5 @@
+<h1>Plantilla Home HBS</h1>
+
+{{#each urls }}
+    {{> Card item=this}} <!-- el signo Mayor hace referencia a partialsDir de handlebar, el cual está ruteado a partialsDir: ["views/components"] -->
+{{/each}}
