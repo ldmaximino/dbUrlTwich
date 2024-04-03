@@ -9,6 +9,12 @@
 </head>
 <body>
     {{> Navbar}}        <!-- el signo Mayor hace referencia a partialsDir de handlebar, el cual está ruteado a partialsDir: ["views/components"] -->
+    
+    <div class="container mt-3">
+        {{#each mensajes }}
+            <div class="alert alert-dark mb-2">{{this.msg}}</div>
+        {{/each}}
+    </div>
 
     <div class="container mt-3">
         {{{ body }}}

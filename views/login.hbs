@@ -1,1 +1,23 @@
-<h1>Plantilla Login</h1>
+<h1 class="text-center my-5">Login de Usuario</h1>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form action="/auth/login" method="post">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+            <input
+                class="form-control mb-2"
+                type="text"
+                placeholder="Ingrese su e-mail"
+                name="email"
+                value="ldmaximino@gmail.com"
+            >
+            <input 
+                class="form-control mb-2"
+                type="password"
+                placeholder="Ingrese su password"
+                name="password"
+                value="123456"
+            >
+            <button type="submit" class="btn btn-primary">Acceder</button>
+        </form>
+    </div>
+</div>

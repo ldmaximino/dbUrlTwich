@@ -1,0 +1,16 @@
+<h1 class="text-center">Hola, {{user.userName}}</h1>
+<p class="text-center my-4">Editar tu perfil</p>
+<div class="text-center my-4">
+    {{#if img}}
+        <img src="/img/perfiles/{{img}}" alt="Imagen Perfil Default" class="rounded-circle">
+    {{else}}
+        <img src="/img/perfiles/perfil_default.jpg" alt="Imagen Perfil Default" class="rounded-circle">
+    {{/if}}
+    
+</div>
+
+<form action="/perfil?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">  <!-- El enctype es para el manejo de imágenes -->
+    {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}" /> --}} <!-- El csrfToken cambia para las imágenes y se agrega en el action de la línea de arriba-->
+    <input class="form-control from-control-sm" id="formFileSm" type="file" name="myFile">
+    <button class="btn btn-dark my-3">Cambiar Imagen</button>
+</form> 
