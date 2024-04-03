@@ -38,7 +38,7 @@ const registerUser = async (req,res) => {
             from: '"Leandro BackEnd 😶‍🌫️🎶😁" <leandro@backend.email>', // sender address
             to: user.email, // list of receivers
             subject: "Confirma tu cuenta ✔", // Subject line
-            html: `<a href="${process.env.pathHeroku || 'http://localhost:5001'}/auth/confirmar/${user.tokenConfirm}">Confirma tu cuenta haciendo click aquí</a>`, // html body
+            html: `<a href="${process.env.pathHeroku || 'http://localhost:5001/'}auth/confirmar/${user.tokenConfirm}">Confirma tu cuenta haciendo click aquí</a>`, // html body
         });
 
         req.flash("mensajes",[{msg: 'Revisa tu correo electrónico y valida la cuenta.'}]);

@@ -22,6 +22,7 @@ const corsOptions = {
 app.use(cors());
 
 //crear sesión del sitio web
+app.set("trust proxy",1);
 app.use(session({
     secret: process.env.secretSession,
     resave: false,
